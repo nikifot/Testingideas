@@ -10,6 +10,6 @@ for i in range(5):
         print('Hello from child: %d' % tid)
     else:
         print('closing')
-        os.__exit__()
+        os._exit()
 
 
