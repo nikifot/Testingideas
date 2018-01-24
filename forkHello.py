@@ -13,7 +13,7 @@ for i in range(1, 10):
     tid = os.fork()
     if tid:
         print('Hello from child: %d' % tid)
-        print('the factorial of {0} is {1}'.format({i, factorial(i)}))
+        print('the factorial of {} is {}'.format(i, factorial(i)))
     else:
         print('closing')
         os._exit(0)
