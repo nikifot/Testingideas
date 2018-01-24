@@ -6,6 +6,6 @@ print('this is parent!')
 tid = os.fork()
 for i in range(5):
     if tid == 0:
-        print('Hello from child')
+        print('Hello from child: %d' % os.getpgid())
 
 
