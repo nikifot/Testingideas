@@ -3,6 +3,7 @@ import os
 import time
 
 def factorial(number):
+    time.sleep(5)
     for i in range(number-1, 0, -1):
         number = number * i
     return number
@@ -11,7 +12,7 @@ def factorial(number):
 print('this is parent!')
 
 t0 = time.time()
-for i in range(1, 10):
+for i in range(1000, 1500):
     tid = os.fork()
     if tid:
         print('Hello from child: %d' % tid)
