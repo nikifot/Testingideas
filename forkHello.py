@@ -24,7 +24,7 @@ t1 = time.time()
 print('multithreading: {}'.format(t1-t0))
 
 t0 = time.time()
-for i in range(1, 10):
+for i in range(100, 110):
 
     print('Hello from child:')
     print('the factorial of {} is {}'.format(i, factorial(i)))
