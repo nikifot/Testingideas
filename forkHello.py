@@ -14,13 +14,11 @@ print('this is parent!')
 t0 = time.time()
 for i in range(100, 110):
     tid = os.fork()
-    if tid:
+    if tid == 0:
         print('Hello from child: %d' % tid)
-
-    else:
         print('the factorial of {} is {}'.format(i, factorial(i)))
-        print('closing')
         os._exit(0)
+
 
 t1 = time.time()
 print('multithreading: {}'.format(t1-t0))
