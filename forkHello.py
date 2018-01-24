@@ -21,7 +21,7 @@ for i in range(1, 10):
         os._exit(0)
 
 t1 = time.time()
-print('multithreading: %d' % t1-t0)
+print('multithreading: {}'.format(t1-t0))
 
 t0 = time.time()
 for i in range(1, 10):
@@ -30,4 +30,4 @@ for i in range(1, 10):
     print('the factorial of {} is {}'.format(i, factorial(i)))
 
 t1 = time.time()
-print('serial: %d' % t1-t0)
+print('serial: {}'.format(t1-t0))
