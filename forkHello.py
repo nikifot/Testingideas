@@ -12,12 +12,13 @@ def factorial(number):
 print('this is parent!')
 
 t0 = time.time()
-for i in range(1000, 1500):
+for i in range(100, 110):
     tid = os.fork()
     if tid:
         print('Hello from child: %d' % tid)
-        print('the factorial of {} is {}'.format(i, factorial(i)))
+
     else:
+        print('the factorial of {} is {}'.format(i, factorial(i)))
         print('closing')
         os._exit(0)
 
